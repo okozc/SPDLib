@@ -119,7 +119,6 @@
     </Compile>
     <Compile Include="Engine\MyCodeExecutor.vb" />
     <Compile Include="Engine\MyCodeFunction.vb" />
-    <Compile Include="Engine\MyTranslator.vb" />
     <Compile Include="User Controlls\AboutBox.Designer.vb">
       <DependentUpon>AboutBox.vb</DependentUpon>
     </Compile>
