@@ -43,6 +43,10 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SyntaxHighlighter, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\SyntaxHighlighter.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -53,12 +57,8 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
     <Reference Include="zxing, Version=0.16.2.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
-      <HintPath>..\packages\ZXing.Net.0.16.2\lib\net45\zxing.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="zxing.presentation, Version=0.16.2.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
-      <HintPath>..\packages\ZXing.Net.0.16.2\lib\net45\zxing.presentation.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\zxing.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -87,7 +87,6 @@
     <Compile Include="Engine\PointsRectangle.vb" />
     <Compile Include="Engine\PublicEnums.vb" />
     <Compile Include="Engine\SharedFunctions.vb" />
-    <Compile Include="iniFile.vb" />
     <Compile Include="Item Classes\BarcodeSubclasses\Code128.vb" />
     <Compile Include="Item Classes\BarcodeSubclasses\Code39.vb" />
     <Compile Include="Item Classes\BarcodeSubclasses\Code39EX.vb" />
@@ -223,9 +222,6 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="packages.config" />
-    <None Include="SPDLib.lng">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ptr_add_circle.png" />
@@ -298,12 +294,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\deletedoc.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\DownloadedProjects\SyntaxHighlighter\SyntaxHighlighter.csproj">
-      <Project>{2fb0f42e-f9b6-44c0-8443-fc051a44a64e}</Project>
-      <Name>SyntaxHighlighter</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\datamatrix.png" />
@@ -469,6 +459,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ptr_add_barcode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Lib\SyntaxHighlighter.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Lib\zxing.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
