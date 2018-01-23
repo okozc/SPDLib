@@ -1,5 +1,6 @@
 # SPDLib
-.NET Library for Structured Document or Label printing with built in Designer User Control
+.NET Library for Structured Document or Label printing with built in Designer User Control.
+Uses .NET Port of Zebra Crossing (zxing.dll) fo Barcode generator and Syntax Highlighter Library created by [Patrik Svensson](https://www.codeproject.com/Members/Patrik-Svensson).
 
 Please see the [Wiki](https://github.com/okozc/SPDLib/wiki) for more Information.
 
