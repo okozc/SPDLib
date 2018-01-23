@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SPDLib.MyDocument" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACCiAUgABCAAgIAgEYAAgBQAABCAQABAAAFAArACiAE=</HashCode>
+      <FileName>Engine\Document\MyDocument.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SPDLib.MyDocumentArea" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAABdVgGLCIAiAAERCAAAUQIBAAIEAAAgUAAAhAAgAQ=</HashCode>
+      <FileName>Engine\Document\MyDocumentArea.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SPDLib.MyDataField" Collapsed="true">
+    <Position X="2.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\Field\MyDataField.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPDLib.MyField" Collapsed="true">
+    <Position X="2.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAACAAEAAEAAAAAAQAAAgAAEAAAQAwgoABEAA=</HashCode>
+      <FileName>Engine\Field\MyField.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SPDLib.MyFunctionField" Collapsed="true">
+    <Position X="5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAgAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Engine\Field\MyFunctionField.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPDLib.MyStaticField" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAgAAAAAAAAQAAAgAAAAAAAAgAAAAEAA=</HashCode>
+      <FileName>Engine\Field\MyStaticField.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPDLib.MyCodeExecutor" Collapsed="true">
+    <Position X="23.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Engine\MyCodeExecutor.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPDLib.cVBEvalProvider" Collapsed="true">
+    <Position X="23.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAACAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Engine\MyCodeExecutor.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPDLib.MyCodeFunction" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAgAAAACCAAAAAAAAhAAQACgABAAAAAAAAAgACAAA=</HashCode>
+      <FileName>Engine\MyCodeFunction.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SPDLib.MyDrawEngine2" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BMBCRgAYmC4GkRCgJE/EoRQEAyMIARojKeFYhwMQYg0=</HashCode>
+      <FileName>Engine\MyDrawEngine2.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SPDLib.MyOperationsEngine2" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BRQIBAgDSCoKEQJgAEJAgEAQAACAACAQABgAgiABqAU=</HashCode>
+      <FileName>Engine\MyOperationsEngine2.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SPDLib.MyPrintEngine" Collapsed="true">
+    <Position X="25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAARGAQAEAAAhLkAAIBAAAIAAIBAAIAAAAAAgIIAAA=</HashCode>
+      <FileName>Engine\MyPrintEngine.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPDLib.MyTranslator" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAACAACAAAAAAAAAAAAAAAAAIAEAAAAgAAAAA=</HashCode>
+      <FileName>Engine\MyTranslator.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SPDLib.PointsRectangle" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="23.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAICAAgAAEAAADAAAAAIABAAAAAAAAAgAAgFg=</HashCode>
+      <FileName>Engine\PointsRectangle.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SPDLib.IniFile" Collapsed="true">
+    <Position X="21.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAACAAAAAAAAECAgAABAAQAgAAEAAAACAgAg=</HashCode>
+      <FileName>iniFile.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPDLib.Code128" Collapsed="true">
+    <Position X="5.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAgAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Item Classes\BarcodeSubclasses\Code128.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPDLib.Code39" Collapsed="true">
+    <Position X="7.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAgAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Item Classes\BarcodeSubclasses\Code39.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPDLib.Code39EX" Collapsed="true">
+    <Position X="10" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAACAAgAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Item Classes\BarcodeSubclasses\Code39EX.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPDLib.QrCode" Collapsed="true">
+    <Position X="3.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Item Classes\BarcodeSubclasses\QrCode.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPDLib.MyBarcodeItem" Collapsed="true">
+    <Position X="6.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAACQAAAACAAAACIQFAgAAAAAAAAAQAAAAAgKAQhAAA=</HashCode>
+      <FileName>Item Classes\MyBarcodeItem.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPDLib.MyCounterItem" Collapsed="true">
+    <Position X="26.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Item Classes\MyCounterItem.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPDLib.MyDataItem" Collapsed="true">
+    <Position X="1" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAACAAAAAAAAAAAAAAAAAAAAAAAAAgCAAABAA=</HashCode>
+      <FileName>Item Classes\MyDataItem.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPDLib.MyElypseItem" Collapsed="true">
+    <Position X="12.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAACAAAACAABAAEAAgAAAASAAAAAAAAAgBAAA=</HashCode>
+      <FileName>Item Classes\MyElypseItem.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPDLib.MyItem" Collapsed="true">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AUAAAQgAJCCAgAAEQAYQEETJAAAAAAgQAQSgAgAAYAg=</HashCode>
+      <FileName>Item Classes\MyItem.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SPDLib.MyItemBorderStyle" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SECEQQCUACAAAEAENgAABgACAAAAQAAAAAAACoAiCAA=</HashCode>
+      <FileName>Item Classes\MyItemBorderStyle.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SPDLib.MyLineItem" Collapsed="true">
+    <Position X="14.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAICAAgAAAACIDAAAgAAAAAAAAQACAAAAAAAA=</HashCode>
+      <FileName>Item Classes\MyLineItem.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPDLib.MyPictureItem" Collapsed="true">
+    <Position X="16.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAACAAAAAAAEIAABAAAAAAQBAAAAAACAABAAA=</HashCode>
+      <FileName>Item Classes\MyPictureItem.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPDLib.MyRectangleItem" Collapsed="true">
+    <Position X="19" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAACAAAACAABAAEAAgAAAACAAAAAAAAAABAAA=</HashCode>
+      <FileName>Item Classes\MyRectangleItem.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPDLib.MyTextItem" Collapsed="true">
+    <Position X="1" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAQBoACAAAIAIgGAAgAAAAAAAQAAQBAAACAABAAA=</HashCode>
+      <FileName>Item Classes\MyTextItem.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPDLib.AboutBox" Collapsed="true">
+    <Position X="21.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JAQAAAEAECAAAAAAAACAAAgCAAAAAAAAAFwAAAAAAAA=</HashCode>
+      <FileName>User Controlls\AboutBox.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPDLib.DataSelector" Collapsed="true">
+    <Position X="25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQAAAEAACAQCAAAAACAEAACgCCgAAAAAAAQAABAAAA=</HashCode>
+      <FileName>User Controlls\DataSelector.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPDLib.DesignerControl" Collapsed="true">
+    <Position X="26.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wEFGKEqzTeQCIwIL4QS5DCeXwu7EEYEegW+Agg4k2n4=</HashCode>
+      <FileName>User Controlls\DesignerControl.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPDLib.FunctionEditor" Collapsed="true">
+    <Position X="28.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAECBQAQEAAACAAAACACBBAAIAIAIAiAAAAAA=</HashCode>
+      <FileName>User Controlls\FunctionEditor.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPDLib.MyDocumentBuilder" Collapsed="true">
+    <Position X="23.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAgECAAEAAAgACAAAgCAPQQIAAIAEAAAgAAAAA=</HashCode>
+      <FileName>User Controlls\MyDocumentBuilder.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPDLib.MyFunctionsWindow" Collapsed="true">
+    <Position X="26.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARAAAAAASABAAAAAACAAAACAEACAAgAgGEAAAAAAAA=</HashCode>
+      <FileName>User Controlls\MyFunctionsWindow.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPDLib.MyPrintDialog" Collapsed="true">
+    <Position X="23.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQAAAlACAGAAAAQAAACAAAACCAAAgAAAgEAAAAEAFAA=</HashCode>
+      <FileName>User Controlls\MyPrintDialog.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPDLib.MyPropertiesWindow" Collapsed="true">
+    <Position X="26.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABEAAAAAACAAAAAAAACAAAACAEQAAAAACCAAAAAAAAA=</HashCode>
+      <FileName>User Controlls\MyPropertiesWindow.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPDLib.My.MySettings" Collapsed="true">
+    <Position X="28.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="SPDLib.DocumentPageOrientation" Collapsed="true">
+    <Position X="23.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAgA=</HashCode>
+      <FileName>Engine\Document\MyDocument.vb</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SPDLib.DocumentType" Collapsed="true">
+    <Position X="25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Engine\Document\MyDocument.vb</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SPDLib.DocumentAreaType" Collapsed="true">
+    <Position X="21.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAABAAAAABABAQAQAAAAAAAAIAA=</HashCode>
+      <FileName>Engine\Document\MyDocumentArea.vb</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SPDLib.ItemType" Collapsed="true">
+    <Position X="28.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAEAAAAAAAAAAAAAAAAgQBAAAAAACAEBAAA=</HashCode>
+      <FileName>Item Classes\MyItem.vb</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SPDLib.ItemHorizontalAlignment" Collapsed="true">
+    <Position X="26.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAIAAA=</HashCode>
+      <FileName>Item Classes\MyItem.vb</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SPDLib.ItemVerticalAlignment" Collapsed="true">
+    <Position X="21.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAIAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Item Classes\MyItem.vb</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SPDLib.MyItemPosition" Collapsed="true">
+    <Position X="25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Item Classes\MyItem.vb</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SPDLib.MyItemVisibility" Collapsed="true">
+    <Position X="26.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAACAIAAAAAAAAAAA=</HashCode>
+      <FileName>Item Classes\MyItem.vb</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SPDLib.LineStyle" Collapsed="true">
+    <Position X="23.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAABAAAAAAIAAAAAAEAAAA=</HashCode>
+      <FileName>Item Classes\MyItemBorderStyle.vb</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Module Name="SPDLib.PublicEnums" Collapsed="true">
+    <Position X="25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Engine\PublicEnums.vb</FileName>
+    </TypeIdentifier>
+  </Module>
+  <Module Name="SPDLib.SharedFunctions" Collapsed="true">
+    <Position X="28.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAMAAQICQAAAAAAAACACAAkACBAAAIAABA=</HashCode>
+      <FileName>Engine\SharedFunctions.vb</FileName>
+    </TypeIdentifier>
+  </Module>
+  <Module Name="SPDLib.ConvertValue" Collapsed="true">
+    <Position X="21.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Item Classes\BarcodeSubclasses\ConvertValue.vb</FileName>
+    </TypeIdentifier>
+  </Module>
+  <Module Name="SPDLib.My.Resources.Resources" Collapsed="true">
+    <Position X="26.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MSIgQQAAgkEKEAgACgUBXhACARUBIlEDQBQYIhgJIPE=</HashCode>
+    </TypeIdentifier>
+  </Module>
+  <Module Name="SPDLib.My.MySettingsProperty" Collapsed="true">
+    <Position X="23.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Module>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
