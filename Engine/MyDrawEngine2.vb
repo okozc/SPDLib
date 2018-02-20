@@ -722,7 +722,7 @@ Public Class MyDrawEngine2
                         ItemStringFormat.LineAlignment = StringAlignment.Far
                 End Select
                 If Not DataItem.WordWrap Then ItemStringFormat.FormatFlags = StringFormatFlags.NoWrap
-                g.DrawString(If(DesignerMode, DataItem.DataField.FriendlyName, DataItem.Value), DataItem.TextFont, New SolidBrush(DataItem.TextColor), ItemRectangle, ItemStringFormat)
+                g.DrawString(If(DesignerMode, DataItem.DataField.Description, DataItem.Value), DataItem.TextFont, New SolidBrush(DataItem.TextColor), ItemRectangle, ItemStringFormat)
             Case ItemType.Barcode
                 DrawBarcode(ItemRectangle.Location, BarcodeItem, g, DesignerMode)
         End Select

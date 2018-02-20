@@ -50,6 +50,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -75,15 +76,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Engine\Field\MyDataField.vb" />
     <Compile Include="Engine\Document\MyDocument.vb" />
     <Compile Include="Engine\Document\MyDocumentArea.vb" />
-    <Compile Include="Engine\MyDrawEngine2.vb" />
+    <Compile Include="Engine\Field\MyDataField.vb" />
     <Compile Include="Engine\Field\MyField.vb" />
     <Compile Include="Engine\Field\MyFunctionField.vb" />
+    <Compile Include="Engine\Field\MyStaticField.vb" />
+    <Compile Include="Engine\Field\MyStaticTextField.vb" />
+    <Compile Include="Engine\MyDrawEngine2.vb" />
     <Compile Include="Engine\MyOperationsEngine2.vb" />
     <Compile Include="Engine\MyPrintEngine.vb" />
-    <Compile Include="Engine\Field\MyStaticField.vb" />
     <Compile Include="Engine\PointsRectangle.vb" />
     <Compile Include="Engine\PublicEnums.vb" />
     <Compile Include="Engine\SharedFunctions.vb" />
@@ -143,16 +145,22 @@
     <Compile Include="User Controlls\DesignerControl.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="User Controlls\DocumentBuilder\AreaSelector.Designer.vb">
+      <DependentUpon>AreaSelector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User Controlls\DocumentBuilder\AreaSelector.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="User Controlls\FunctionEditor.Designer.vb">
       <DependentUpon>FunctionEditor.vb</DependentUpon>
     </Compile>
     <Compile Include="User Controlls\FunctionEditor.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User Controlls\MyDocumentBuilder.Designer.vb">
+    <Compile Include="User Controlls\DocumentBuilder\MyDocumentBuilder.Designer.vb">
       <DependentUpon>MyDocumentBuilder.vb</DependentUpon>
     </Compile>
-    <Compile Include="User Controlls\MyDocumentBuilder.vb">
+    <Compile Include="User Controlls\DocumentBuilder\MyDocumentBuilder.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="User Controlls\MyFunctionsWindow.Designer.vb">
@@ -193,10 +201,13 @@
     <EmbeddedResource Include="User Controlls\DesignerControl.resx">
       <DependentUpon>DesignerControl.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User Controlls\DocumentBuilder\AreaSelector.resx">
+      <DependentUpon>AreaSelector.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Controlls\FunctionEditor.resx">
       <DependentUpon>FunctionEditor.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Controlls\MyDocumentBuilder.resx">
+    <EmbeddedResource Include="User Controlls\DocumentBuilder\MyDocumentBuilder.resx">
       <DependentUpon>MyDocumentBuilder.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Controlls\MyFunctionsWindow.resx">
@@ -210,7 +221,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -467,6 +477,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

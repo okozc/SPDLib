@@ -86,6 +86,11 @@ Public Class MyDocumentArea
             Return iAreaType
         End Get
     End Property
+    Protected Friend WriteOnly Property SetType As DocumentAreaType
+        Set(value As DocumentAreaType)
+            iAreaType = value
+        End Set
+    End Property
     <Browsable(False)> Public ReadOnly Property DataSourceType As MyDataSourceType
         Get
             Return iDataSourceType
@@ -173,7 +178,7 @@ Public Class MyDocumentArea
         Next
         Return Nothing
     End Function
-    Public Function GetFieldsByType(FieldType As MyField.MyFieldType) As List(Of MyField)
+    Public Function GetFieldsByType(FieldType As MyField.FieldType) As List(Of MyField)
         Dim RetList As New List(Of MyField)
         For Each Field In iAreaFields
             If Field.Type = FieldType Then RetList.Add(Field)

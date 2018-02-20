@@ -1,31 +1,63 @@
-﻿Public Class MyFunctionField
+﻿Imports System.ComponentModel
+
+Public Class MyFunctionField
     Inherits MyField
 
-    Private iFunction As MyCodeFunction
+    Private iCode As String
+    Private iInputFields As List(Of MyField)
 
-    Public Property Code As String
+    <[ReadOnly](True)> Public Overrides Property Name As String
         Get
-            Return iFunction.Code
+            Return MyBase.Name
         End Get
         Set(value As String)
-            iFunction.Code = value
         End Set
     End Property
-    Sub New()
-        MyBase.New(MyFieldType.FunctionField, "NewFunctionField")
-        iFunction = New MyCodeFunction(Name)
-        iFunction.Name = Name
-    End Sub
-    Sub New(Name As String, CodeFunction As MyCodeFunction)
-        MyBase.New(MyFieldType.FunctionField, Name)
-        iFunction = CodeFunction
-    End Sub
+    <[ReadOnly](True)> Public Overrides Property Description As String
+        Get
+            Return MyBase.Description
+        End Get
+        Set(value As String)
+            MyBase.Description = value
+        End Set
+    End Property
+    <[ReadOnly](True)> Public Overrides Property Value As String
+        Get
+            Return MyBase.Value
+        End Get
+        Set(value As String)
+        End Set
+    End Property
+    <Browsable(False)> Public Property Code As String
+        Get
+            Return iCode
+        End Get
+        Set(value As String)
+            iCode = value
+        End Set
+    End Property
+    <Browsable(False)> Protected Friend WriteOnly Property SetValue As String
+        Set(value As String)
+            MyBase.Value = value
+        End Set
+    End Property
+    <Browsable(False)> Protected Friend Property InputFields As List(Of MyField)
+        Get
+            Return iInputFields
+        End Get
+        Set(value As List(Of MyField))
+            iInputFields = value
+        End Set
+    End Property
 
-    Protected Overrides Sub Dispose(disposing As Boolean)
-        If disposing Then
-            If Not IsNothing(iFunction) Then iFunction.Dispose()
-            iFunction = Nothing
-        End If
-        MyBase.Dispose(disposing)
+    Sub New()
+        MyBase.New("FunctionField", FieldType.FunctionField)
+        iCode = ""
+    End Sub
+    Sub New(FieldName As String, Optional FieldFormat As String = "")
+        MyBase.New(FieldName, FieldType.FunctionField)
+        Format = FieldFormat
+        Description = ""
+        iCode = ""
     End Sub
 End Class

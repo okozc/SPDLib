@@ -10,12 +10,12 @@ Public Class MyStaticField
         Set(value As String)
         End Set
     End Property
-    <[ReadOnly](True)> Public Overrides Property Description As String
+    <[ReadOnly](True)> Public Overrides Property FriendlyName As String
         Get
-            Return MyBase.Description
+            Return MyBase.FriendlyName
         End Get
         Set(value As String)
-            MyBase.Description = value
+            MyBase.FriendlyName = value
         End Set
     End Property
     <[ReadOnly](True)> Public Overrides Property Value As String
@@ -25,11 +25,19 @@ Public Class MyStaticField
         Set(value As String)
         End Set
     End Property
-    <[ReadOnly](True)> Public Overrides Property ValueType As FieldValueType
+    Public Overrides Property Format As String
+        Get
+            Return MyBase.Format
+        End Get
+        Set(value As String)
+            MyBase.Format = value
+        End Set
+    End Property
+    <[ReadOnly](True)> Public Overrides Property ValueType As MyValueType
         Get
             Return MyBase.ValueType
         End Get
-        Set(value As FieldValueType)
+        Set(value As MyValueType)
         End Set
     End Property
     <Browsable(False)> Protected Friend WriteOnly Property SetValue As String
@@ -38,12 +46,17 @@ Public Class MyStaticField
         End Set
     End Property
 
-    Sub New()
-        MyBase.New("StaticField", FieldType.StaticField)
+    Sub New(Name As String, Format As String, ValueType As MyValueType)
+        MyBase.New(Name, Format, ValueType, MyFieldType.StaticField)
     End Sub
-    Sub New(FieldName As String, Optional FieldFormat As String = "")
-        MyBase.New(FieldName, FieldType.StaticField)
-        Format = FieldFormat
-        Description = ""
+
+    Public Overrides Function ToString() As String
+        Return FriendlyName
+    End Function
+    Protected Overrides Sub Dispose(disposing As Boolean)
+        If disposing Then
+
+        End If
+        MyBase.Dispose(disposing)
     End Sub
 End Class

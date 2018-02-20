@@ -493,13 +493,13 @@ Public Class MyOperationsEngine2
                         Case AddingType.Data
                             iDataSelector.Clear()
                             For Each Field In iDrawEngine.Document.StaticFields
-                                iDataSelector.AddItem(0, Field.Name, Field.FriendlyName)
+                                iDataSelector.AddItem(0, Field.Name, Field.Description)
                             Next
-                            For Each Field In Area.GetFieldsByType(MyField.MyFieldType.DataField)
-                                iDataSelector.AddItem(1, Field.Name, Field.FriendlyName)
+                            For Each Field In Area.GetFieldsByType(MyField.FieldType.DataField)
+                                iDataSelector.AddItem(1, Field.Name, Field.Description)
                             Next
-                            For Each Field In Area.GetFieldsByType(MyField.MyFieldType.FunctionField)
-                                iDataSelector.AddItem(2, Field.Name, Field.FriendlyName)
+                            For Each Field In Area.GetFieldsByType(MyField.FieldType.FunctionField)
+                                iDataSelector.AddItem(2, Field.Name, Field.Description)
                             Next
                             If iDataSelector.ShowDialog = DialogResult.OK Then
                                 Dim Item As New MyDataItem(ItemRect) With {
@@ -564,13 +564,13 @@ Public Class MyOperationsEngine2
                 Dim cItem As MyDataItem = CType(Item, MyDataItem)
                 iDataSelector.Clear()
                 For Each Field In iDrawEngine.Document.StaticFields
-                    iDataSelector.AddItem(0, Field.Name, Field.FriendlyName)
+                    iDataSelector.AddItem(0, Field.Name, Field.Description)
                 Next
-                For Each Field In Area.GetFieldsByType(MyField.MyFieldType.DataField)
-                    iDataSelector.AddItem(1, Field.Name, Field.FriendlyName)
+                For Each Field In Area.GetFieldsByType(MyField.FieldType.DataField)
+                    iDataSelector.AddItem(1, Field.Name, Field.Description)
                 Next
-                For Each Field In Area.GetFieldsByType(MyField.MyFieldType.FunctionField)
-                    iDataSelector.AddItem(2, Field.Name, Field.FriendlyName)
+                For Each Field In Area.GetFieldsByType(MyField.FieldType.FunctionField)
+                    iDataSelector.AddItem(2, Field.Name, Field.Description)
                 Next
                 If iDataSelector.ShowDialog = DialogResult.OK Then
                     Select Case iDataSelector.SelectedFieldType
@@ -686,6 +686,9 @@ Public Class MyOperationsEngine2
                     Case ItemType.Data
                         Dim cItem As MyDataItem = CType(Item, MyDataItem)
                         cItem.TextFont = NewFont.Clone
+                    Case ItemType.Barcode
+                        Dim cItem As MyBarcodeItem = CType(Item, MyBarcodeItem)
+                        cItem.TextFont = NewFont.Clone
                 End Select
             Next
             iDrawEngine.RedrawArea(iDrawEngine.SelectedArea)
@@ -700,6 +703,9 @@ Public Class MyOperationsEngine2
                         cItem.TextColor = NewColor
                     Case ItemType.Data
                         Dim cItem As MyDataItem = CType(Item, MyDataItem)
+                        cItem.TextColor = NewColor
+                    Case ItemType.Barcode
+                        Dim cItem As MyBarcodeItem = CType(Item, MyBarcodeItem)
                         cItem.TextColor = NewColor
                 End Select
             Next
@@ -724,6 +730,9 @@ Public Class MyOperationsEngine2
                         cItem.BackColor = NewColor
                     Case ItemType.Data
                         Dim cItem As MyDataItem = CType(Item, MyDataItem)
+                        cItem.BackColor = NewColor
+                    Case ItemType.Barcode
+                        Dim cItem As MyBarcodeItem = CType(Item, MyBarcodeItem)
                         cItem.BackColor = NewColor
                 End Select
             Next
@@ -795,6 +804,12 @@ Public Class MyOperationsEngine2
                                 cItem.Border.StyleLeft = LineStyle.None
                                 cItem.Border.StyleBottom = LineStyle.None
                                 cItem.Border.StyleRight = LineStyle.None
+                            Case ItemType.Barcode
+                                Dim cItem As MyBarcodeItem = CType(Item, MyBarcodeItem)
+                                cItem.Border.StyleTop = LineStyle.None
+                                cItem.Border.StyleLeft = LineStyle.None
+                                cItem.Border.StyleBottom = LineStyle.None
+                                cItem.Border.StyleRight = LineStyle.None
                         End Select
                     Case Border.Top
                         Select Case Item.Type
@@ -806,6 +821,9 @@ Public Class MyOperationsEngine2
                                 cItem.Border.StyleTop = LineStyle.Solid
                             Case ItemType.Data
                                 Dim cItem As MyDataItem = CType(Item, MyDataItem)
+                                cItem.Border.StyleTop = LineStyle.Solid
+                            Case ItemType.Barcode
+                                Dim cItem As MyBarcodeItem = CType(Item, MyBarcodeItem)
                                 cItem.Border.StyleTop = LineStyle.Solid
                         End Select
                     Case Border.Left
@@ -819,6 +837,9 @@ Public Class MyOperationsEngine2
                             Case ItemType.Data
                                 Dim cItem As MyDataItem = CType(Item, MyDataItem)
                                 cItem.Border.StyleLeft = LineStyle.Solid
+                            Case ItemType.Barcode
+                                Dim cItem As MyBarcodeItem = CType(Item, MyBarcodeItem)
+                                cItem.Border.StyleLeft = LineStyle.Solid
                         End Select
                     Case Border.Bottom
                         Select Case Item.Type
@@ -831,6 +852,9 @@ Public Class MyOperationsEngine2
                             Case ItemType.Data
                                 Dim cItem As MyDataItem = CType(Item, MyDataItem)
                                 cItem.Border.StyleBottom = LineStyle.Solid
+                            Case ItemType.Barcode
+                                Dim cItem As MyBarcodeItem = CType(Item, MyBarcodeItem)
+                                cItem.Border.StyleBottom = LineStyle.Solid
                         End Select
                     Case Border.Right
                         Select Case Item.Type
@@ -842,6 +866,9 @@ Public Class MyOperationsEngine2
                                 cItem.Border.StyleRight = LineStyle.Solid
                             Case ItemType.Data
                                 Dim cItem As MyDataItem = CType(Item, MyDataItem)
+                                cItem.Border.StyleRight = LineStyle.Solid
+                            Case ItemType.Barcode
+                                Dim cItem As MyBarcodeItem = CType(Item, MyBarcodeItem)
                                 cItem.Border.StyleRight = LineStyle.Solid
                         End Select
                     Case Border.All
@@ -860,6 +887,12 @@ Public Class MyOperationsEngine2
                                 cItem.Border.StyleRight = LineStyle.Solid
                             Case ItemType.Data
                                 Dim cItem As MyDataItem = CType(Item, MyDataItem)
+                                cItem.Border.StyleTop = LineStyle.Solid
+                                cItem.Border.StyleLeft = LineStyle.Solid
+                                cItem.Border.StyleBottom = LineStyle.Solid
+                                cItem.Border.StyleRight = LineStyle.Solid
+                            Case ItemType.Barcode
+                                Dim cItem As MyBarcodeItem = CType(Item, MyBarcodeItem)
                                 cItem.Border.StyleTop = LineStyle.Solid
                                 cItem.Border.StyleLeft = LineStyle.Solid
                                 cItem.Border.StyleBottom = LineStyle.Solid

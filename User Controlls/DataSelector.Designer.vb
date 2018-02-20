@@ -25,12 +25,12 @@ Partial Class DataSelector
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DataSelector))
         Me.FieldsList = New System.Windows.Forms.ListView()
+        Me.Img = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.FieldName = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.FriendlyName = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ListIcons = New System.Windows.Forms.ImageList(Me.components)
         Me.Cancel_BTN = New System.Windows.Forms.Button()
         Me.OK_BTN = New System.Windows.Forms.Button()
-        Me.Img = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ListIcons = New System.Windows.Forms.ImageList(Me.components)
         Me.SuspendLayout()
         '
         'FieldsList
@@ -49,6 +49,11 @@ Partial Class DataSelector
         Me.FieldsList.UseCompatibleStateImageBehavior = False
         Me.FieldsList.View = System.Windows.Forms.View.Details
         '
+        'Img
+        '
+        Me.Img.Text = ""
+        Me.Img.Width = 20
+        '
         'FieldName
         '
         Me.FieldName.Text = "Name"
@@ -58,6 +63,14 @@ Partial Class DataSelector
         '
         Me.FriendlyName.Text = "Description"
         Me.FriendlyName.Width = 201
+        '
+        'ListIcons
+        '
+        Me.ListIcons.ImageStream = CType(resources.GetObject("ListIcons.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ListIcons.TransparentColor = System.Drawing.Color.Transparent
+        Me.ListIcons.Images.SetKeyName(0, "static.png")
+        Me.ListIcons.Images.SetKeyName(1, "field.png")
+        Me.ListIcons.Images.SetKeyName(2, "function.png")
         '
         'Cancel_BTN
         '
@@ -71,6 +84,7 @@ Partial Class DataSelector
         '
         'OK_BTN
         '
+        Me.OK_BTN.Enabled = False
         Me.OK_BTN.Location = New System.Drawing.Point(264, 492)
         Me.OK_BTN.Margin = New System.Windows.Forms.Padding(4)
         Me.OK_BTN.Name = "OK_BTN"
@@ -78,19 +92,6 @@ Partial Class DataSelector
         Me.OK_BTN.TabIndex = 2
         Me.OK_BTN.Text = "OK"
         Me.OK_BTN.UseVisualStyleBackColor = True
-        '
-        'Img
-        '
-        Me.Img.Text = ""
-        Me.Img.Width = 20
-        '
-        'ListIcons
-        '
-        Me.ListIcons.ImageStream = CType(resources.GetObject("ListIcons.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        Me.ListIcons.TransparentColor = System.Drawing.Color.Transparent
-        Me.ListIcons.Images.SetKeyName(0, "static.png")
-        Me.ListIcons.Images.SetKeyName(1, "field.png")
-        Me.ListIcons.Images.SetKeyName(2, "function.png")
         '
         'DataSelector
         '

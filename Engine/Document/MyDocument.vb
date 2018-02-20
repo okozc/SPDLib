@@ -112,9 +112,9 @@ End Enum
         iDocumentType = DocumentType
         iDocumentName = "Document"
         iStaticFields = New List(Of MyField) From {
-            New MyStaticField("PageNumber", "#", MyField.MyValueType.Number) With {.FriendlyName = "Page Number"},
-            New MyStaticField("TotalPages", "#", MyField.MyValueType.Number) With {.FriendlyName = "Total Pages"},
-            New MyStaticField("DocumentName", "", MyField.MyValueType.Text) With {.FriendlyName = "Document Name"}
+            New MyStaticField("PageNumber", "#") With {.Description = "Page Number", .ValueType = MyField.FieldValueType.Numeric},
+            New MyStaticField("TotalPages", "#") With {.Description = "Total Pages", .ValueType = MyField.FieldValueType.Numeric},
+            New MyStaticField("DocumentName", "") With {.Description = "Document Name", .ValueType = MyField.FieldValueType.Text}
         }
     End Sub
     Sub New()
@@ -259,30 +259,30 @@ End Enum
             CreateAttribute(XMLex, AreaNode, "DynamicH", Area.DynamicHeight)
             CreateAttribute(XMLex, AreaNode, "Type", Area.Type.ToString)
             CreateAttribute(XMLex, AreaNode, "DataSource", Area.DataSourceType.ToString)
-            Select Case Area.DataSourceType
-                Case MyDocumentArea.MyDataSourceType.SQLQuery
-                    Dim QueryNode As XmlNode = XMLex.CreateNode(XmlNodeType.Element, "SQLQuery", "")
-                    QueryNode.InnerText = Area.DataSourceSQLQuery
-                    AreaNode.AppendChild(QueryNode)
-                Case MyDocumentArea.MyDataSourceType.ODBCQuery
-                    Dim QueryNode As XmlNode = XMLex.CreateNode(XmlNodeType.Element, "ODBCQuery", "")
-                    QueryNode.InnerText = Area.DataSourceODBCQuery
-                    AreaNode.AppendChild(QueryNode)
-            End Select
-            For Each AreaFL As MyDataField In Area.GetFieldsByType(MyField.MyFieldType.DataField)
+            'Select Case Area.DataSourceType
+            '    Case MyDocumentArea.MyDataSourceType.SQLQuery
+            '        Dim QueryNode As XmlNode = XMLex.CreateNode(XmlNodeType.Element, "SQLQuery", "")
+            '        QueryNode.InnerText = Area.DataSourceSQLQuery
+            '        AreaNode.AppendChild(QueryNode)
+            '    Case MyDocumentArea.MyDataSourceType.ODBCQuery
+            '        Dim QueryNode As XmlNode = XMLex.CreateNode(XmlNodeType.Element, "ODBCQuery", "")
+            '        QueryNode.InnerText = Area.DataSourceODBCQuery
+            '        AreaNode.AppendChild(QueryNode)
+            'End Select
+            For Each AreaFL As MyDataField In Area.GetFieldsByType(MyField.FieldType.DataField)
                 Dim FieldNode As XmlNode = XMLex.CreateNode(XmlNodeType.Element, "Field", "")
                 CreateAttribute(XMLex, FieldNode, "Name", AreaFL.Name)
-                CreateAttribute(XMLex, FieldNode, "FName", AreaFL.FriendlyName)
+                CreateAttribute(XMLex, FieldNode, "FName", AreaFL.Description)
                 CreateAttribute(XMLex, FieldNode, "Type", AreaFL.Type.ToString)
                 CreateAttribute(XMLex, FieldNode, "ValueType", AreaFL.ValueType)
                 CreateAttribute(XMLex, FieldNode, "Format", AreaFL.Format)
                 FieldNode.InnerText = AreaFL.Value
                 AreaNode.AppendChild(FieldNode)
             Next
-            For Each AreaFN As MyFunctionField In Area.GetFieldsByType(MyField.MyFieldType.FunctionField)
+            For Each AreaFN As MyFunctionField In Area.GetFieldsByType(MyField.FieldType.FunctionField)
                 Dim FieldNode As XmlNode = XMLex.CreateNode(XmlNodeType.Element, "Field", "")
                 CreateAttribute(XMLex, FieldNode, "Name", AreaFN.Name)
-                CreateAttribute(XMLex, FieldNode, "FName", AreaFN.FriendlyName)
+                CreateAttribute(XMLex, FieldNode, "FName", AreaFN.Description)
                 CreateAttribute(XMLex, FieldNode, "Type", AreaFN.Type.ToString)
                 CreateAttribute(XMLex, FieldNode, "ValueType", AreaFN.ValueType)
                 CreateAttribute(XMLex, FieldNode, "Format", AreaFN.Format)
@@ -391,7 +391,10 @@ End Enum
                 For Each xItem As XmlNode In xArea.ChildNodes
                     Select Case xItem.Name
                         Case "Field"
-
+                            Dim Fld As New MyDataField(GetAttributeValue(xItem, "Name"), GetAttributeValue(xItem, "FName")) With {
+                                .Format = GetAttributeValue(xItem, "Format"),
+                                .ValueType = cFieldValueType(GetAttributeValue(xItem, "ValueType"))}
+                            Area.Fields.Add(Fld)
                         Case "Function"
 
                         Case "Item"

@@ -100,8 +100,8 @@ Public Class cVBEvalProvider
             ' Setup the Compiler Parameters  
             ' Add any referenced assemblies
             oCParams.ReferencedAssemblies.Add("system.dll")
-            oCParams.ReferencedAssemblies.Add("system.xml.dll")
-            oCParams.ReferencedAssemblies.Add("system.data.dll")
+            'oCParams.ReferencedAssemblies.Add("system.xml.dll")
+            'oCParams.ReferencedAssemblies.Add("system.data.dll")
             oCParams.ReferencedAssemblies.Add("Microsoft.VisualBasic.dll")
             oCParams.CompilerOptions = "/t:library"
             oCParams.GenerateInMemory = True
@@ -110,14 +110,14 @@ Public Class cVBEvalProvider
             Dim sb As StringBuilder = New StringBuilder("")
 
             sb.Append("Imports System" & vbCrLf)
-            sb.Append("Imports System.Xml" & vbCrLf)
-            sb.Append("Imports System.Data" & vbCrLf)
+            'sb.Append("Imports System.Xml" & vbCrLf)
+            'sb.Append("Imports System.Data" & vbCrLf)
             sb.Append("Imports Microsoft.VisualBasic" & vbCrLf)
 
             ' Build a little wrapper code, with our passed in code in the middle 
             sb.Append("Namespace dValuate" & vbCrLf)
             sb.Append("Class EvalRunTime " & vbCrLf)
-            ErrorLineOffset = 6 + CodeFunction.InputValues.Count
+            ErrorLineOffset = 4 + CodeFunction.InputValues.Count
             'sb.Append("Public Function EvaluateIt() As Object " & vbCrLf)
             For Each InputValue In CodeFunction.InputValues
                 sb.Append("Private " & InputValue.Name & "=" & Chr(42) & InputValue.Value & Chr(42) & vbCrLf)

@@ -174,6 +174,18 @@ Public Module SharedFunctions
                 Return MyItemVisibility.Visible
         End Select
     End Function
+    Public Function cFieldValueType(ValueType As String) As MyField.FieldValueType
+        Select Case ValueType
+            Case "Text"
+                Return MyField.FieldValueType.Text
+            Case "Numeric"
+                Return MyField.FieldValueType.Numeric
+            Case "Date"
+                Return MyField.FieldValueType.Date
+            Case Else
+                Return MyField.FieldValueType.Text
+        End Select
+    End Function
     Public Function mmTOp(mm As Single) As Integer
         Return Math.Round(mm / mmpp)
     End Function
